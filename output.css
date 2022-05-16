@@ -1,0 +1,898 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@300;1,400;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.footer .links-footer, .footer .icons, .footer, .main .chefs .noschefs .chef .icons, .main .banniere3 .mainimage, .main .banniere3, .main .menu .menug, .main .banniere2, .main .intro .note, .main .intro .text, .main .intro, .banierre header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .intro .text .btn_reserve, .banierre .home .title .btn_reserve, .banierre .home .title .btn_explore {
+  display: block;
+  width: 150px;
+  padding: 10px 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin: 25px auto;
+  background: rgba(255, 132, 0, 0.87);
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.footer .image_home, .main .chefs .image_home, .main .banniere2 .image_home, .main .intro .text .image_home, .banierre .home .image_home {
+  width: 150px;
+  height: 35px;
+  margin-bottom: 20px;
+  background: url("libs/images/divider-free-img-1-150x35.png");
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body, html {
+  height: auto;
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+
+.banierre {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.banierre header {
+  position: relative;
+  width: 100vw;
+  height: 55px;
+  z-index: 10;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  font-size: 1rem;
+  color: white;
+}
+.banierre header .logo {
+  width: 180px;
+  height: 50px;
+}
+.banierre header .logo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.banierre header nav {
+  background: rgba(209, 208, 208, 0.799);
+  position: absolute;
+  display: none;
+  top: 70px;
+  right: 0;
+  width: 30%;
+  min-height: calc(100vh - 90px);
+  border-radius: 200px 0 0 200px;
+}
+.banierre header nav .nav-bar {
+  width: 100%;
+}
+.banierre header nav .nav-bar li {
+  padding: 10px 0;
+  transition: 0.3s;
+}
+.banierre header nav .nav-bar li:hover {
+  background: #e19405;
+}
+.banierre header nav .nav-bar li:hover a {
+  color: white;
+}
+.banierre header nav .nav-bar a {
+  display: block;
+  margin: 10px auto;
+  color: black;
+  width: 75px;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+.banierre header nav.open {
+  display: flex;
+  animation: menu 0.4s linear;
+}
+.banierre header nav.open a {
+  width: 82px;
+  font-size: 1rem;
+  padding: 5px 20px;
+}
+.banierre header .btn-reserv {
+  display: none;
+}
+.banierre header .burger {
+  position: relative;
+  box-shadow: 0px 0px 0px 0px black;
+  width: 60px;
+  height: 50px;
+  border-radius: 50%;
+}
+.banierre header .burger .btn-burger {
+  position: absolute;
+  top: 50%;
+  left: 17%;
+  background-color: #f3f1f1;
+  height: 4px;
+  width: 40px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.59);
+  border-radius: 3px;
+  transition: 0.3s;
+}
+.banierre header .burger .btn-burger::after, .banierre header .burger .btn-burger::before {
+  content: "";
+  position: absolute;
+  background-color: inherit;
+  height: 4px;
+  width: 40px;
+  border-radius: 3px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.59);
+  transition: 0.3s;
+}
+.banierre header .burger .btn-burger::before {
+  top: -10px;
+  transition: 0.3s;
+}
+.banierre header .burger .btn-burger::after {
+  top: 10px;
+  transition: 0.3s;
+}
+.banierre header .burger.active .btn-burger {
+  width: 0;
+}
+.banierre header .burger.active .btn-burger::after {
+  transform: translateY(-10px) rotate(45deg);
+}
+.banierre header .burger.active .btn-burger::before {
+  transform: translateY(10px) rotate(-45deg);
+}
+.banierre .home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: center/cover url(libs/images/best.jpg);
+  background-attachment: fixed;
+  height: 100vh;
+  max-width: 100%;
+}
+.banierre .home .video {
+  display: none;
+}
+.banierre .home::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  height: auto;
+  z-index: 2;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.778), rgba(161, 161, 161, 0.129));
+}
+.banierre .home .image_home {
+  z-index: 4;
+}
+.banierre .home .title {
+  z-index: 4;
+}
+.banierre .home .title .home_p1 {
+  font-weight: 600;
+  padding: 10px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: rgba(255, 132, 0, 0.87);
+}
+.banierre .home .title h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  padding: 10px 0;
+  margin: auto;
+  pointer-events: cursor;
+}
+.banierre .home .title .home_p2 {
+  display: none;
+  padding: 10px 0;
+  color: white;
+  line-height: 1.5;
+  margin: auto;
+}
+.banierre .home .title .btn_reserve, .banierre .home .title .btn_explore {
+  transition: 0.3s;
+  box-shadow: 0 0 0 0px #e09405;
+  animation: shadow 1.4s infinite;
+}
+.banierre .home .title .btn_reserve:hover, .banierre .home .title .btn_explore:hover {
+  background-color: transparent;
+  color: white;
+}
+.banierre .home .title .btn_explore {
+  background: none;
+  color: white;
+  border: 2px solid rgba(255, 132, 0, 0.87);
+  transition: 0.3s;
+}
+.banierre .home .title .btn_explore:hover {
+  background-color: rgba(255, 132, 0, 0.581);
+  color: black;
+}
+.banierre .home .triangle {
+  z-index: 4;
+  position: absolute;
+  bottom: 0;
+  border-right: 100px solid transparent;
+  border-bottom: 40px solid white;
+  border-left: 100px solid transparent;
+}
+
+.main .intro {
+  flex-direction: column;
+  margin: 30px;
+}
+.main .intro .text {
+  flex-direction: column;
+}
+.main .intro .text .image_bbq {
+  height: 50px;
+  width: 50px;
+  margin-bottom: 20px;
+  background: center center/contain url("libs/images/bbbq-free-img.png");
+}
+.main .intro .text h2 {
+  font-size: 1.5rem;
+  margin: 20px 0;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+.main .intro .text .paraintro1 {
+  margin: 20px 0;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+}
+.main .intro .text .paraintro2 {
+  margin: 20px 0 30px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+}
+.main .intro .text .btn_reserve {
+  transition: 0.3s;
+}
+.main .intro .text .btn_reserve:hover {
+  background: transparent;
+  border: 2px solid rgba(255, 132, 0, 0.87);
+}
+.main .intro .images_parent {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+.main .intro .images_parent .images_1, .main .intro .images_parent .images_2 {
+  position: relative;
+  height: 310px;
+  width: 140px;
+  margin: 10px 40px;
+  border: 2px solid rgba(255, 132, 0, 0.87);
+}
+.main .intro .images_parent .images_1::before, .main .intro .images_parent .images_2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 13px;
+  left: 8px;
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  background: center center/cover url("libs/images/barbecue-food-1-150x300.jpg");
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.main .intro .images_parent .images_2::before {
+  left: -28px;
+  background: center center/cover url("libs/images/barbecue-foods-2-150x300.jpg");
+}
+.main .intro .note {
+  width: 100%;
+  flex-wrap: wrap;
+}
+.main .intro .note h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 60px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+}
+.main .intro .note .food, .main .intro .note .foodgood, .main .intro .note .yelp, .main .intro .note .trip {
+  width: 40%;
+  height: 90px;
+  margin: 10px;
+  filter: brightness(100%) contrast(100%) saturate(0%) blur(0) hue-rotate(0deg);
+  transition-duration: 0.3s;
+}
+.main .intro .note .food:hover, .main .intro .note .foodgood:hover, .main .intro .note .yelp:hover, .main .intro .note .trip:hover {
+  filter: none;
+}
+.main .intro .note .food {
+  background: center/contain no-repeat url("libs/images/goodfood.png");
+}
+.main .intro .note .trip {
+  background: center/contain no-repeat url("libs/images/mag3-free-img-150x100.png");
+}
+.main .intro .note .foodgood {
+  background: center/contain no-repeat url("libs/images/foodmagazin.png");
+}
+.main .intro .note .yelp {
+  background: center/contain no-repeat url("libs/images/yelp.png");
+}
+.main .banniere2 {
+  position: relative;
+  flex-direction: column;
+  height: 50vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.556), rgba(0, 0, 0, 0.222)), center/cover url("libs/images/grill22.jpg");
+}
+.main .banniere2 h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fdb629;
+  font-family: "Times New Roman", Times, serif;
+  margin: 20px 0;
+}
+.main .banniere2 .p1 {
+  color: white;
+  margin: 20px;
+}
+.main .banniere2 .image_home {
+  margin: 20px 0;
+}
+.main .banniere2 .p2 {
+  color: white;
+  margin: 20px;
+  font-size: 0.8rem;
+}
+.main .banniere2 .triangle {
+  position: absolute;
+  bottom: 0;
+  border-right: 100px solid transparent;
+  border-bottom: 40px solid white;
+  border-left: 100px solid transparent;
+}
+.main .banniere2 .triangle {
+  position: absolute;
+  top: 0;
+  border-right: 100px solid transparent;
+  border-top: 40px solid white;
+  border-left: 100px solid transparent;
+}
+.main .menu {
+  height: auto;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.921), rgba(255, 255, 255, 0.881)), url("libs/images/food-pattern-free-img-300x300.png");
+  background-attachment: fixed;
+}
+.main .menu .container_menu {
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.main .menu .menug {
+  flex-direction: column;
+  width: 270px;
+  margin: 30px auto;
+}
+.main .menu .menug .menuimg {
+  width: 120px;
+  height: 120px;
+  background: center/contain no-repeat url("libs/images/food-dish-05-300x300.png");
+}
+.main .menu .menug h2 {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 15px 0;
+  font-family: "Times New Roman", Times, serif;
+}
+.main .menu .menug .prix {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  margin: 15px 0;
+}
+.main .menu .menug .p2 {
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  width: 150px;
+  margin: 15px auto;
+}
+.main .menu .menug .image2 {
+  background: center/contain no-repeat url("libs/images/food-dish-06-300x300.png");
+}
+.main .menu .menug .image3 {
+  background: center/contain no-repeat url("libs/images/food3-free-img-300x300.png");
+}
+.main .menu .menug .image4 {
+  background: center/contain no-repeat url("libs/images/food4-free-img-300x300.png");
+}
+.main .menu .menug .image5 {
+  background: center/contain no-repeat url("libs/images/food6-free-img-300x300.png");
+}
+.main .menu .menug .image6 {
+  background: center/contain no-repeat url("libs/images/food-dish-06-300x300.png");
+}
+.main .banniere3 {
+  position: relative;
+  height: 70vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.701), rgba(0, 0, 0, 0.455)), center/cover url("libs/images/happyhours.jpg");
+  background-attachment: fixed;
+  flex-direction: column;
+}
+.main .banniere3 .mainimage {
+  width: 100%;
+}
+.main .banniere3 .mainimage .mainimage1 {
+  width: 60px;
+  height: 60px;
+  background: center/contain no-repeat url("libs/images/bbq-free-img.png");
+  margin: 0 20px;
+}
+.main .banniere3 .mainimage span {
+  display: block;
+  width: 200px;
+  height: 2px;
+  background: white;
+}
+.main .banniere3 .p1 {
+  font-size: 1rem;
+  text-align: center;
+  color: white;
+  margin: 20px auto;
+}
+.main .banniere3 h2 {
+  font-size: 2rem;
+  color: #fdb629;
+  font-family: "Times New Roman", Times, serif;
+  margin: 20px auto;
+}
+.main .banniere3 .p2 {
+  font-size: 0.7rem;
+  color: white;
+  margin: 20px auto;
+}
+.main .banniere3 .btn_reserve {
+  display: block;
+  width: 150px;
+  padding: 10px 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin: 40px auto;
+  background: rgba(255, 132, 0, 0.87);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  animation: shadow 1.4s infinite;
+}
+.main .banniere3 .btn_reserve:hover {
+  background: transparent;
+  border: 2px solid rgba(255, 132, 0, 0.87);
+  color: white;
+}
+.main .banniere3 .triangle {
+  position: absolute;
+  bottom: 0;
+  border-right: 100px solid transparent;
+  border-bottom: 40px solid white;
+  border-left: 100px solid transparent;
+}
+.main .chefs {
+  height: auto;
+  padding: 50px 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.921), rgba(255, 255, 255, 0.881)), url("libs/images/food-pattern-free-img-300x300.png");
+  background-attachment: fixed;
+}
+.main .chefs h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 30px auto;
+  font-weight: 700;
+  font-family: "Times New Roman", Times, serif;
+}
+.main .chefs .image_home {
+  margin: 20px auto;
+}
+.main .chefs .p1 {
+  text-align: center;
+  margin: 20px 20px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.main .chefs .noschefs {
+  margin-top: 30px;
+}
+.main .chefs .noschefs .chef .image_chef {
+  width: 150px;
+  height: 150px;
+  background: center/contain url("libs/images/chef1-free-img-150x150.png");
+  margin: 20px auto;
+}
+.main .chefs .noschefs .chef .name {
+  font-size: 1.5rem;
+  margin: 10px auto;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+}
+.main .chefs .noschefs .chef .descreption {
+  font-size: 1rem;
+  text-align: center;
+}
+.main .chefs .noschefs .chef .icons {
+  margin: 10px auto;
+  text-align: center;
+}
+.main .chefs .noschefs .chef .icons a {
+  color: rgba(255, 132, 0, 0.87);
+  transition: 0.3s;
+  display: block;
+  margin: 0 5px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.main .chefs .noschefs .chef .icons a:hover {
+  color: white;
+  background: rgba(255, 132, 0, 0.87);
+}
+.main .chefs .noschefs .chef .icons .fab {
+  width: 20px;
+  height: 20px;
+  margin: 4px auto;
+}
+.main .chefs .noschefs .chef2 .image_chef {
+  background: center/contain url("libs/images/chef4-free-img-150x150.png");
+}
+.main .chefs .noschefs .chef3 .image_chef {
+  background: center/contain url("libs/images/chef3-free-img-150x150.png");
+}
+
+.footer {
+  position: relative;
+  height: 70vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.556), rgba(0, 0, 0, 0.2)), center/cover url("libs/images/footer.jpg");
+  background-attachment: fixed;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.footer h2 {
+  color: #fff;
+  margin-top: 50px;
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Times New Roman", Times, serif;
+}
+.footer .image_home {
+  margin: 30px auto;
+}
+.footer .p1 {
+  color: white;
+  text-align: center;
+  margin: 20px auto;
+  font-size: 0.8rem;
+  padding: 0 20px;
+  line-height: 1.5;
+}
+.footer .btn_reserve {
+  display: block;
+  width: 150px;
+  padding: 10px 20px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin: 25px auto;
+  background: rgba(255, 132, 0, 0.87);
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 0 0px #e09405;
+  animation: shadow 1.4s infinite;
+}
+.footer .btn_reserve:hover {
+  background-color: rgba(31, 30, 30, 0.581);
+  color: white;
+}
+.footer .p2 {
+  color: white;
+  text-align: center;
+  margin: 20px auto;
+  font-size: 1.2rem;
+  font-family: "Times New Roman", Times, serif;
+  padding: 0 20px;
+  line-height: 1.5;
+}
+.footer .icons {
+  margin: 10px auto 30px;
+  text-align: center;
+}
+.footer .icons a {
+  color: rgba(255, 132, 0, 0.87);
+  transition: 0.3s;
+  display: block;
+  margin: 0 10px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.footer .icons a:hover {
+  color: white;
+  background: rgba(255, 132, 0, 0.87);
+  transform: scale(1.5);
+}
+.footer .icons i {
+  display: block;
+  margin: 5px auto;
+}
+.footer .links-footer {
+  width: 100%;
+  justify-content: space-around;
+  padding: 8px 0;
+}
+.footer .links-footer a {
+  display: block;
+  color: rgba(147, 145, 145, 0.992);
+  font-size: 0.6rem;
+  margin: 0 10px 2px;
+}
+.footer .triangle {
+  position: absolute;
+  top: 0;
+  border-right: 100px solid transparent;
+  border-top: 40px solid white;
+  border-left: 100px solid transparent;
+}
+
+@keyframes shadow {
+  to {
+    box-shadow: 0 0 0 15px rgba(224, 147, 5, 0.108);
+  }
+}
+@keyframes menu {
+  0% {
+    opacity: 1;
+    transform: translate(300px);
+  }
+}
+@media (min-width: 900px) {
+  .banierre header nav {
+    display: block;
+    background: transparent;
+    position: relative;
+    top: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    min-height: 50px;
+  }
+  .banierre header nav .nav-bar {
+    display: flex;
+    justify-content: center;
+  }
+  .banierre header nav .nav-bar li {
+    padding: 0 20px;
+  }
+  .banierre header nav .nav-bar li:hover {
+    background: none;
+  }
+  .banierre header nav .nav-bar li a {
+    color: white;
+    margin: 0;
+    padding: 10px;
+  }
+  .banierre header nav .nav-bar li a:hover, .banierre header nav .nav-bar li a.active {
+    color: rgba(255, 132, 0, 0.87);
+  }
+  .banierre header .burger {
+    display: none;
+  }
+  .banierre header .btn-reserv {
+    display: block;
+    background: rgba(255, 132, 0, 0.87);
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    transition: 0.3s;
+  }
+  .banierre header .btn-reserv:hover {
+    background: transparent;
+    border: 3px solid #fdb629;
+  }
+  .banierre .home .video {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    z-index: -20;
+    min-width: 100%;
+    width: auto;
+    min-height: 100%;
+    height: auto;
+  }
+  .banierre .home .video video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .banierre .home .title {
+    width: 700px;
+  }
+  .banierre .home .title .home_p1 {
+    font-size: 1.5rem;
+  }
+  .banierre .home .title h2 {
+    font-size: 4rem;
+    color: rgba(255, 132, 0, 0.87);
+    transition: ease-in-out;
+  }
+  .banierre .home .title .home_p2 {
+    display: block;
+    text-align: center;
+  }
+  .banierre .home .title .btn_btn {
+    display: flex;
+    margin-top: 20px;
+  }
+  .banierre .home .title .btn_btn .btn_reserve, .banierre .home .title .btn_btn .btn_explore {
+    width: 200px;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+  }
+  .banierre .home .triangle {
+    z-index: 4;
+    position: absolute;
+    bottom: 0;
+    border-right: 180px solid transparent;
+    border-bottom: 48px solid white;
+    border-left: 180px solid transparent;
+  }
+
+  .main .intro {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .main .intro .text {
+    width: 55%;
+  }
+  .main .intro .images_parent {
+    width: 45%;
+  }
+  .main .intro .images_parent .images_1, .main .intro .images_parent .images_2 {
+    height: 330px;
+    width: 200px;
+    margin: 10px 40px;
+  }
+  .main .intro .images_parent .images_1::before, .main .intro .images_parent .images_2::before {
+    left: -20px;
+    height: 100%;
+    width: 100%;
+  }
+  .main .intro .images_parent .images_1::before {
+    left: 8px;
+  }
+  .main .intro .note {
+    width: 100%;
+  }
+  .main .intro .note h2, .main .intro .note .food, .main .intro .note .foodgood, .main .intro .note .yelp, .main .intro .note .trip {
+    width: 15%;
+    margin: 10px;
+  }
+  .main .banniere2 {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.556), rgba(0, 0, 0, 0.222)), center/cover url("libs/images/grill21.jpg");
+    background-attachment: fixed;
+  }
+  .main .menu .container_menu {
+    width: 100%;
+    margin: 0 auto;
+    padding: 100px 0;
+  }
+  .main .menu .container_menu .menug {
+    width: 440px;
+    flex-direction: row-reverse;
+  }
+  .main .menu .container_menu .menug .menuimg {
+    width: 170px !important;
+    height: 170px !important;
+    margin-left: 10px;
+  }
+  .main .menu .container_menu .menug h2 {
+    font-size: 1.5rem;
+  }
+  .main .menu .container_menu .menug .prix {
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  .main .chefs .noschefs {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .main .chefs .noschefs .chef2 {
+    height: 200px;
+    justify-items: flex-end;
+  }
+}
+@media (min-width: 1200px) {
+  .main .menu .container_menu {
+    width: 74%;
+  }
+}
+
+/*# sourceMappingURL=output.css.map */
